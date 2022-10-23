@@ -45,5 +45,7 @@ while not game_over:
             row = get_next_open_row(board, col)
             drop_piece(board, row, col, 2)
 
+    print_board(board)
+
     turn += 1
     turn = turn % 2
