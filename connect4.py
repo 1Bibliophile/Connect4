@@ -50,7 +50,9 @@ def winning_move(board, piece):
                 return True
 
 def draw_board(board):
-    pass
+    for c in range(COLUMN_COUNT):
+        for r in range(ROW_COUNT):
+            pygame.draw.rect(screen, BLUE, (c*SQUARESIZE, r*SQUARESIZE, SQUARESIZE, SQUARESIZE))
 
 board = create_board()
 print_board(board)
@@ -64,6 +66,8 @@ height = (ROW_COUNT + 1) * SQUARESIZE
 
 size = (width, height)
 screen = pygame.display.set_mode(size)
+draw_board(board)
+pygame.display.update()
 
 while not game_over:
     for event in pygame.event.get():
