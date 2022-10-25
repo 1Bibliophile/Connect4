@@ -94,7 +94,7 @@ while not game_over:
             sys.exit()
 
         if event.type == pygame.MOUSEBUTTONDOWN:
-            
+
             # Ask for Player 1 Input
             if turn == 0:
                 posx = event.pos[0]
@@ -124,11 +124,11 @@ while not game_over:
                     if winning_move(board, 2):
                         print("Player 2 Wins! Congrats!")
                         game_over = True
-                        
+                        break
             
 
-            print_board(board)
-            draw_board(board)
+    print_board(board)
+    draw_board(board)
 
-            turn += 1
-            turn = turn % 2
+    turn += 1
+    turn = turn % 2
