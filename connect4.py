@@ -106,7 +106,7 @@ while not game_over:
 
         if event.type == pygame.MOUSEBUTTONDOWN:
             pygame.draw.rect(screen, BLACK, (0,0, width, SQUARESIZE))
-            
+
             # Ask for Player 1 Input
             if turn == 0:
                 posx = event.pos[0]
@@ -120,7 +120,7 @@ while not game_over:
 
                     if winning_move(board, 1):
                         # print("Player 1 Wins! Congrats!")
-                        label = myfont.render("Player 1 wins!", RED)
+                        label = myfont.render("Player 1 wins!", 1, RED)
                         screen.blit(label, (40, 10))
                         game_over = True
 
@@ -137,7 +137,7 @@ while not game_over:
  
                     if winning_move(board, 2):
                         # print("Player 2 Wins! Congrats!")
-                        label = myfont.render("Player 2 wins!", YELLOW)
+                        label = myfont.render("Player 2 wins!", 2, YELLOW)
                         screen.blit(label, (40, 10))
                         game_over = True
                         
