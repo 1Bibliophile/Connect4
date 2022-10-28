@@ -104,7 +104,7 @@ while not game_over:
             else:
                 pygame.draw.circle(screen, YELLOW, (posx, int(SQUARESIZE / 2)), RADIUS)
         
-        pygame.draw.update()
+        pygame.display.update()
 
         if event.type == pygame.MOUSEBUTTONDOWN:
             pygame.draw.rect(screen, BLACK, (0,0, width, SQUARESIZE))
