@@ -94,6 +94,7 @@ while not game_over:
             sys.exit()
 
         if event.type == pygame.MOUSEMOTION:
+            pygame.draw.rect(screen, BLACK, (0,0, width, SQUARESIZE))
             posx = event.pos[0]
 
             if turn == 0:
@@ -140,3 +141,6 @@ while not game_over:
 
             turn += 1
             turn = turn % 2
+
+            if game_over:
+                pygame.time.wait(3000)
