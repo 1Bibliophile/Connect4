@@ -88,6 +88,8 @@ screen = pygame.display.set_mode(size)
 draw_board(board)
 pygame.display.update()
 
+myfont = pygame.font.SysFont("monospace", 75)
+
 while not game_over:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -116,7 +118,7 @@ while not game_over:
                     drop_piece(board, row, col, 1)
 
                     if winning_move(board, 1):
-                        print("Player 1 Wins! Congrats!")
+                        # print("Player 1 Wins! Congrats!")
                         game_over = True
 
             # Ask for Player 2 Input
@@ -131,7 +133,7 @@ while not game_over:
                     drop_piece(board, row, col, 2)
  
                     if winning_move(board, 2):
-                        print("Player 2 Wins! Congrats!")
+                        # print("Player 2 Wins! Congrats!")
                         game_over = True
                         
             
